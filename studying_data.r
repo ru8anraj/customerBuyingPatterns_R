@@ -1,5 +1,7 @@
 # unique values 
-print(unique(data["Country"]))
+nrow(unique(InvoiceData["Country"]))
+typeof(unique(InvoiceData["Country"]))
+
 
 # getting missing values
 nrows <- nrow(data)
