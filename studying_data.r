@@ -1,11 +1,21 @@
-# this file is to test and understand the prediction models in R
+# unique values 
+print(unique(data["Country"]))
 
-# loading excel reading library
-library("openxlsx")
+# getting missing values
+nrows <- nrow(data)
+nrows
 
-getwd() # gets the working directory
+ncomplete <- sum(complete.cases(data))
+ncomplete
 
-# reading the data from the excel sheet as dataframe
-data <- read.xlsx("./data/Online Retail.xlsx", sheet = 1)
+npercent <- ncomplete / nrows
+npercent
 
-print(head(data, 5))
+# getting the datatypes of each column in a data frame
+sapply(data, typeof)
+
+# extracting the cancelled orders
+invoiceNo = data["InvoiceNo"]
+
+# column names of the data 
+colnames(InvoiceData)
